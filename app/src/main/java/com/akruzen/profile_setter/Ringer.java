@@ -7,7 +7,7 @@ import android.media.AudioManager;
 import android.os.Bundle;
 import android.widget.Toast;
 
-public class RingerMode extends AppCompatActivity {
+public class Ringer extends AppCompatActivity {
 
     private void setRingerMode () {
         AudioManager audioManager = (AudioManager) this.getSystemService(Context.AUDIO_SERVICE);
@@ -20,6 +20,7 @@ public class RingerMode extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // setRingerMode();
+        setContentView(R.layout.activity_ringer);
+        setRingerMode();
     }
 }
