@@ -10,13 +10,12 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.widget.Toast;
 
-public class Ringer extends AppCompatActivity {
+public class Vibrate extends AppCompatActivity {
 
     private void setRingerMode () {
         AudioManager audioManager = (AudioManager) this.getSystemService(Context.AUDIO_SERVICE);
-        audioManager.setRingerMode(AudioManager.RINGER_MODE_NORMAL);
-        audioManager.setStreamVolume(AudioManager.STREAM_RING, audioManager.getStreamMaxVolume(AudioManager.STREAM_RING), 0);
-        Toast.makeText(this, "Maxed out the ringer volume", Toast.LENGTH_SHORT).show();
+        audioManager.setRingerMode(AudioManager.RINGER_MODE_VIBRATE);
+        Toast.makeText(this, "Phone set to vibrate", Toast.LENGTH_SHORT).show();
         finishAndRemoveTask();
     }
 
@@ -36,7 +35,6 @@ public class Ringer extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // setContentView(R.layout.activity_ringer);
         if (!permissionGranted()) {
             Toast.makeText(this, "Please select Pro Set here and allow DnD permission.", Toast.LENGTH_SHORT).show();
             getPermission();

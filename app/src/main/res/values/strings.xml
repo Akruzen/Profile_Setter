@@ -2,5 +2,9 @@
     <string name="app_name">Profile Setter</string>
     <string name="short_shortcut">Ringer</string>
     <string name="long_shortcut">Max out Ringer Volume</string>
+    <string name="short_shortcut3">Silent</string>
+    <string name="long_shortcut3">Set phone to silent</string>
+    <string name="short_shortcut2">Vibrate</string>
+    <string name="long_shortcut2">Set phone to vibrate</string>
     <string name="disabled">Disabled</string>
 </resources>

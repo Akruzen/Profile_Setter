@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
     <shortcut
-        android:shortcutId="compose"
+        android:shortcutId="ringer"
         android:enabled="true"
         android:icon="@drawable/ic_baseline_ring_volume_24"
         android:shortcutShortLabel="@string/short_shortcut"
@@ -16,4 +16,37 @@
              they launch this shortcut. -->
     </shortcut>
     <!-- Specify more shortcuts here. -->
+
+    <shortcut
+        android:shortcutId="vibrate"
+        android:enabled="true"
+        android:icon="@drawable/ic_round_vibration_24"
+        android:shortcutShortLabel="@string/short_shortcut2"
+        android:shortcutLongLabel="@string/long_shortcut2"
+        android:shortcutDisabledMessage="@string/disabled">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.akruzen.profile_setter"
+            android:targetClass="com.akruzen.profile_setter.Vibrate" />
+        <!-- If your shortcut is associated with multiple intents, include them
+             here. The last intent in the list determines what the user sees when
+             they launch this shortcut. -->
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="silent"
+        android:enabled="true"
+        android:icon="@drawable/ic_round_volume_off_24"
+        android:shortcutShortLabel="@string/short_shortcut3"
+        android:shortcutLongLabel="@string/long_shortcut3"
+        android:shortcutDisabledMessage="@string/disabled">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.akruzen.profile_setter"
+            android:targetClass="com.akruzen.profile_setter.Silent" />
+        <!-- If your shortcut is associated with multiple intents, include them
+             here. The last intent in the list determines what the user sees when
+             they launch this shortcut. -->
+    </shortcut>
+
 </shortcuts>
